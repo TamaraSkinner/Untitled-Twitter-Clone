@@ -1,7 +1,7 @@
-📜 Scrollr - The Wizarding Social Scrying Pool
+#📜 Scrollr - The Wizarding Social Scrying Pool
 Scrollr is a real-time social platform designed for wizards to share their latest spells, incantations, and potion recipes. It features a unique "Consult the Orb" AI integration that transforms standard text into dark, gothic wizardry.
 
-✨ Key Features
+##✨ Key Features
 Wizard Authentication: Secure portal entry using JWT-based "Magic Tokens".
 
 Real-time Scrying Pool: A live global feed powered by WebSockets (Socket.io) that updates instantly when new spells are cast.
@@ -12,7 +12,7 @@ Dynamic Identity: Automated slug generation (e.g., @gandalf_the_grey) based on y
 
 Responsive Cauldron: An auto-expanding spell-casting area that grows as your magic flows.
 
-🛠️ Tech Stack
+##🛠️ Tech Stack
 Backend
 
 Node.js & Express: Core server architecture.
@@ -29,7 +29,7 @@ Vanilla JavaScript: Lightweight, reactive DOM manipulation.
 
 CSS3: Custom dark-themed wizardry with a responsive layout.
 
-🚀 Quick Start
+##🚀 Quick Start
 1. Prepare the Ingredients (Prerequisites)
 
 Node.js 18+
@@ -54,12 +54,12 @@ OPENAI_API_KEY=your_orb_key
 
 Bash
 node server.js
-🏆 Submission Highlights
+##🏆 Submission Highlights
 AI Integration: Seamless "Incantify" feature that bridges modern LLMs with a fantasy UI.
 
 Real-world Architecture: Implements industry-standard JWT authentication and WebSocket synchronization.
 
 Data Integrity: Uses PostgreSQL JOINs to ensure every spell correctly attributes its original creator.
 
-📜 License
+##📜 License
 MIT License - Scrollr Hackathon Project
