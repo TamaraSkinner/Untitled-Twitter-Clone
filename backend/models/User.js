@@ -20,6 +20,7 @@ class UserBuilder {
 
 class User {
     constructor(userData) {
+        this.id = userData.id;
         this.username = userData.username;
         this.email = userData.email;
         this.passwordHash = userData.passwordHash;
@@ -27,7 +28,7 @@ class User {
 
     async save() {
         try {
-            await pool.query('Begin');
+            await pool.query('BEGIN');
 
             // Check if user already exists
             const existingUser = await pool.query('SELECT * FROM users WHERE email = $1', [this.email]);
@@ -42,10 +43,10 @@ class User {
             );
             
             this.id = newUser.rows[0].id;
-            await pool.query('Commit');
+            await pool.query('COMMIT');
             return this.id;
         } catch (error) {
-            await pool.query('Rollback');
+            await pool.query('ROLLBACK');
             throw error;
         }
     }

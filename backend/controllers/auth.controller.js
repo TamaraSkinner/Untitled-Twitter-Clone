@@ -46,13 +46,21 @@ exports.loginWizard = async (req, res) => {
         if (!isPasswordValid) {
             return res.status(401).json({ message: 'Invalid incantation' });
         }
-        const token = jwt.sign({ id: wizard.id, email: wizard.email }, process.env.TOKEN_SECRET, { expiresIn: '1h' });
+        const token = jwt.sign({ id: wizard.id, wizardname: wizard.wizardname, email: wizard.email }, process.env.TOKEN_SECRET, { expiresIn: '1h' });
         res.json({ message: 'Login successful', token });
     } catch (error) {
         res.status(500).json({ message: 'Error during login', error: error.message });
     }
 };
 
-exports.logoutWizard = async (req, res) => {
-    
-}
+exports.getWizard = async (req, res) => {
+    try {
+        const wizard = await User.getByEmail(req.wizard.email);
+        if (!wizard) {
+            return res.status(404).json({ message: 'Wizard not found' });
+        }
+        res.json({ id: wizard.id, wizardname: wizard.username, email: wizard.email });
+    } catch (error) {
+        res.status(500).json({ message: 'Error fetching wizard data', error: error.message });
+    }   
+};
