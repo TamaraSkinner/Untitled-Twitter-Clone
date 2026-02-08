@@ -1,7 +1,8 @@
 .trends-for-you {
     background: #30074c;
     border-radius: 15px;
-    margin-bottom: 15px;
+    margin: 20px 10px;
+    padding: 10px;
 }
 
 .trends-for-you__block {
