@@ -29,31 +29,6 @@ Vanilla JavaScript: Lightweight, reactive DOM manipulation.
 
 CSS3: Custom dark-themed wizardry with a responsive layout.
 
-### 🚀 Quick Start
-1. Prepare the Ingredients (Prerequisites)
-
-Node.js 18+
-
-PostgreSQL Database
-
-OpenAI API Key
-
-2. Initialize the Cauldron
-
-Bash
-cd backend
-npm install
-3. Set Environmental Wards Create a .env file in the backend folder:
-
-Code snippet
-PORT=3000
-DATABASE_URL=your_postgres_url
-TOKEN_SECRET=your_secret_magic_phrase
-OPENAI_API_KEY=your_orb_key
-4. Ignite the Server
-
-Bash
-node server.js
 ### 🏆 Submission Highlights
 AI Integration: Seamless "Incantify" feature that bridges modern LLMs with a fantasy UI.
 
